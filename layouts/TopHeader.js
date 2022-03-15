@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-const TopHeader = ({ route }) => {
-  const props = route.params;
+const TopHeader = (props) => {
+  // const props = route.params;
   return (
     /* 이게 있어야 헤더가 무식하게 커지지 않음*/
     <SafeAreaProvider>
@@ -18,7 +18,7 @@ const TopHeader = ({ route }) => {
           color: "#fff",
         }}
         centerComponent={{
-          text: props.title,
+          text: props.name,
           style: styles.heading,
         }}
       />

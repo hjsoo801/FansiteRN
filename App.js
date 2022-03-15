@@ -13,7 +13,7 @@ export default function App() {
     try {
       setTimeout(() => {
         return change(false);
-      }, 7000);
+      }, 5000);
     } catch (err) {
       alert(err);
     }
