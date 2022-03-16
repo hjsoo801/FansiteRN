@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { TopHeader } from "./layouts";
+import { TopHeader, DrawerMenu } from "./layouts";
 import { Home, About, Loading } from "./screens";
 
 const Stack = createNativeStackNavigator();
@@ -32,6 +32,7 @@ export default function App() {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="TopHeader" component={TopHeader} />
           <Stack.Screen name="About" component={About} />
+          <Stack.Screen name="DrawerMenu" component={DrawerMenu} />
         </Stack.Navigator>
       </NavigationContainer>
     );

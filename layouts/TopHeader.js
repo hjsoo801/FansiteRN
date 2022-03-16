@@ -1,6 +1,5 @@
 import { Header as HeaderRNE, HeaderProps, Icon } from "react-native-elements";
-import { StyleSheet } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 const TopHeader = (props) => {
@@ -9,10 +8,13 @@ const TopHeader = (props) => {
     /* 이게 있어야 헤더가 무식하게 커지지 않음*/
     <SafeAreaProvider>
       <HeaderRNE
-        leftComponent={{
-          icon: "menu",
-          color: "#fff",
-        }}
+        leftComponent={
+          <View>
+            <TouchableOpacity onPress={() => {}}>
+              <Icon name="menu" color={"#fff"} />
+            </TouchableOpacity>
+          </View>
+        }
         rightComponent={{
           icon: "search",
           color: "#fff",

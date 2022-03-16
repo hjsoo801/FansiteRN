@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { View, ScrollView, StyleSheet } from "react-native";
 import { Button, Text } from "react-native-elements";
 import { TopHeader } from "../layouts";
