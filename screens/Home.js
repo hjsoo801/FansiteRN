@@ -6,10 +6,8 @@ import {
   Card,
   Icon,
   Image,
-  Tab,
   SocialIcon,
 } from "react-native-elements";
-import { TopHeader, DrawerMenu } from "../layouts";
 
 const Home = ({ navigation }) => {
   const menuList = [
@@ -20,8 +18,7 @@ const Home = ({ navigation }) => {
     { id: 4, name: "Board" },
   ];
   return (
-    <ScrollView>
-      <TopHeader name="HOME" />
+    <ScrollView style={{ flex: 1 }}>
       <View>
         <Image
           style={[styles.bannerImg]}
@@ -36,51 +33,13 @@ const Home = ({ navigation }) => {
           Debut | 2008.09.23`}
         </Text>
       </View>
+      <Text style={{ fontWeight: "bold", fontSize: 16, margin: 10 }}>SNS</Text>
       <View style={[styles.snsArea]}>
         <SocialIcon type="twitter" iconSize={18} style={[styles.snsIcon]} />
         <SocialIcon type="facebook" iconSize={18} style={[styles.snsIcon]} />
         <SocialIcon type="youtube" iconSize={18} style={[styles.snsIcon]} />
         <SocialIcon type="instagram" iconSize={18} style={[styles.snsIcon]} />
       </View>
-      <View style={[styles.cardContainer]}>
-        <Image
-          style={{ width: 100, height: 200, marginRight: 20 }}
-          source={{
-            uri: "http://piglet911.cafe24.com/iu/img/history.464a4b86.jpg",
-          }}
-        />
-        <Image
-          style={{ width: 220 }}
-          source={{
-            uri: "http://piglet911.cafe24.com/iu/img/album.d75fbda8.png",
-          }}
-        />
-        <Image
-          style={{ width: 220, height: 200, margin: 5 }}
-          source={{
-            uri: "http://1.bp.blogspot.com/-GGv4y5Cyw80/Ur6psSKg8KI/AAAAAAAAFS4/mMd1aMWA_NM/s1600/OUdogbaby2.gif",
-          }}
-        />
-        <Image
-          style={{ width: 100, margin: 10 }}
-          source={{
-            uri: "http://piglet911.cafe24.com/iu/img/advertising.13403a98.jpg",
-          }}
-        />
-        <Image
-          style={{ width: 340, height: 200, margin: 10 }}
-          source={{
-            uri: "http://piglet911.cafe24.com/iu/img/filmography.b6c8d911.png",
-          }}
-        />
-      </View>
-      {/* <View style={[styles.tab]}>
-        {menuList.map((item, index) => (
-          <Text style={[styles.tabItem]} key={index}>
-            {item.name}
-          </Text>
-        ))}
-      </View> */}
       <View>
         <Button
           icon={
@@ -154,6 +113,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-evenly",
+    marginBottom: 20,
   },
   snsIcon: {
     height: 40,
